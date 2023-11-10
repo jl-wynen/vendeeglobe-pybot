@@ -14,7 +14,7 @@ from vendeeglobe import (
     WeatherForecast,
     config,
 )
-from vendeeglobe.utils import distance_on_surface
+from vendeeglobe.utils import distance_on_surface, goto
 
 CREATOR = "Bjørn Hurtigsejl"
 
@@ -79,6 +79,7 @@ class Bot:
                 radius=5,
             ),
         ]
+        self.wiggle_sign = +1
 
     def run(
         self,
@@ -118,6 +119,9 @@ class Bot:
             The map of the world: 1 for sea, 0 for land.
         """
         instructions = Instructions()
+        if not self.course:
+            return instructions
+
         ch = self.course[0]
         dist = distance_on_surface(
             longitude1=longitude,
@@ -133,8 +137,12 @@ class Bot:
         if dist < ch.radius:
             del self.course[0]
 
-        instructions.location = Location(
+        target = Location(
             longitude=ch.longitude, latitude=ch.latitude
         )
+        heading = goto(Location(latitude=latitude, longitude=longitude), target)
+        heading += self.wiggle_sign * 10
+        self.wiggle_sign = -self.wiggle_sign
+        instructions.heading = Heading(heading)
 
         return instructions
