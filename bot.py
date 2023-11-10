@@ -16,7 +16,7 @@ from vendeeglobe import (
 )
 from vendeeglobe.utils import distance_on_surface
 
-CREATOR = "TeamName"  # This is your team name
+CREATOR = "Jan-Lukas"
 
 
 class Bot:
@@ -26,18 +26,53 @@ class Bot:
 
     def __init__(self):
         self.team = CREATOR  # Mandatory attribute
-        self.avatar = 1  # Optional attribute
+        self.avatar = 34  # Optional attribute
         self.course = [
-            Checkpoint(latitude=43.797109, longitude=-11.264905, radius=50),
-            Checkpoint(longitude=-29.908577, latitude=17.999811, radius=50),
-            Checkpoint(latitude=-11.441808, longitude=-29.660252, radius=50),
-            Checkpoint(longitude=-63.240264, latitude=-61.025125, radius=50),
-            Checkpoint(latitude=2.806318, longitude=-168.943864, radius=1990.0),
-            Checkpoint(latitude=-62.052286, longitude=169.214572, radius=50.0),
-            Checkpoint(latitude=-15.668984, longitude=77.674694, radius=1190.0),
-            Checkpoint(latitude=-39.438937, longitude=19.836265, radius=50.0),
-            Checkpoint(latitude=14.881699, longitude=-21.024326, radius=50.0),
-            Checkpoint(latitude=44.076538, longitude=-18.292936, radius=50.0),
+            Checkpoint(
+                latitude=config.start.latitude,
+                longitude=config.start.longitude-1,
+                radius=5,
+            ),
+            Checkpoint(57.987, -49.846, radius=50),
+            Checkpoint(57.987, -49.846, radius=50),
+            Checkpoint(73.95,-66.51, radius=50),
+            Checkpoint(74.19,-87.97, radius=50),
+            Checkpoint(74.27,-103.58, radius=30),
+            Checkpoint(73.80,-112.58, radius=30),
+            Checkpoint(75.52,-123.23, radius=30),
+            Checkpoint(75.02,-125.23, radius=30),
+            Checkpoint(70.64,-129.22, radius=30),
+            Checkpoint(70.29,-137.00, radius=30),
+            Checkpoint(70.96,-147.39, radius=40),
+            Checkpoint(71.60,-158.24, radius=30),
+            Checkpoint(68.26,-169.57, radius=30),
+            Checkpoint(65.691,-168.350, radius=50),
+            Checkpoint(63.180,-168.108, radius=50),
+            Checkpoint(52.8895,-169.3980, radius=30),
+            Checkpoint(11.80, -183.94, radius=50),  # checkpoint 1
+            Checkpoint(13.29, 166.15, radius=30),
+            Checkpoint(6.50,133.946, radius=30),
+            Checkpoint(4.797,125.554, radius=30),
+            Checkpoint(1.498,119.796, radius=30),
+            Checkpoint(-8.574,115.791, radius=30),
+            Checkpoint(-9.291,115.528, radius=30),
+            Checkpoint(-6.0, 80.67, radius=50),  # checkpoint 2
+            Checkpoint(11.352,52.241, radius=50),
+            Checkpoint(12.695,51.187, radius=50),
+            Checkpoint(12.288,43.681, radius=30),
+            Checkpoint(13.540,42.633, radius=30),
+            Checkpoint(27.526,34.111, radius=50),
+            Checkpoint(28.484,33.157, radius=30),
+            Checkpoint(29.7812,32.5019, radius=20),
+            Checkpoint(32.401,32.357, radius=50),
+            Checkpoint(36.400,14.585, radius=50),
+            Checkpoint(37.824,9.900, radius=50),
+            Checkpoint(37.738,2.172, radius=50),
+            Checkpoint(36.161,-2.016, radius=50),
+            Checkpoint(35.9961,-5.4028, radius=30),
+            Checkpoint(35.9316,-6.0423, radius=30),
+            Checkpoint(36.837,-10.173, radius=40),
+            Checkpoint(44.005,-10.016, radius=40),
             Checkpoint(
                 latitude=config.start.latitude,
                 longitude=config.start.longitude,
