@@ -52,7 +52,7 @@ class Bot:
             Checkpoint(11.80, -183.94, radius=50),  # checkpoint 1
             Checkpoint(13.29, 166.15, radius=30),
             Checkpoint(6.50,133.946, radius=30),
-            Checkpoint(4.797,125.554, radius=30),
+            Checkpoint(4.597,125.554, radius=50),
             Checkpoint(1.498,119.796, radius=30),
             Checkpoint(-8.574,115.791, radius=30),
             Checkpoint(-9.291,115.528, radius=30),
