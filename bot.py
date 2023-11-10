@@ -141,8 +141,8 @@ class Bot:
             longitude=ch.longitude, latitude=ch.latitude
         )
         heading = goto(Location(latitude=latitude, longitude=longitude), target)
-        heading += self.wiggle_sign * 10
-        self.wiggle_sign = -self.wiggle_sign
+        # heading += self.wiggle_sign * 10
+        # self.wiggle_sign = -self.wiggle_sign
         instructions.heading = Heading(heading)
 
         return instructions
