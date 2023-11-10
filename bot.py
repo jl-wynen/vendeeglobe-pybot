@@ -33,8 +33,7 @@ class Bot:
                 longitude=config.start.longitude - 1,
                 radius=5,
             ),
-            Checkpoint(57.987, -49.846, radius=50),
-            Checkpoint(57.987, -49.846, radius=50),
+            Checkpoint(59.987, -49.846, radius=50),
             Checkpoint(73.95, -66.51, radius=50),
             Checkpoint(74.19, -87.97, radius=50),
             Checkpoint(74.27, -103.58, radius=30),
@@ -49,7 +48,7 @@ class Bot:
             Checkpoint(65.691, -168.350, radius=50),
             Checkpoint(63.180, -168.108, radius=50),
             Checkpoint(52.8895, -169.3980, radius=30),
-            Checkpoint(11.80, -183.94, radius=50),  # checkpoint 1
+            Checkpoint(12.80, -183.94, radius=50),  # checkpoint 1
             Checkpoint(13.29, 166.15, radius=30),
             Checkpoint(6.50, 133.946, radius=30),
             Checkpoint(4.597, 125.554, radius=50),
@@ -57,8 +56,8 @@ class Bot:
             Checkpoint(-8.574, 115.791, radius=30),
             Checkpoint(-9.291, 115.528, radius=30),
             Checkpoint(-6.0, 80.67, radius=50),  # checkpoint 2
-            Checkpoint(11.352, 52.241, radius=50),
-            Checkpoint(12.695, 51.187, radius=50),
+            Checkpoint(13.352, 54.241, radius=50),
+            # Checkpoint(12.695, 51.187, radius=50),
             Checkpoint(12.288, 43.681, radius=30),
             Checkpoint(13.540, 42.633, radius=30),
             Checkpoint(27.526, 34.111, radius=50),
@@ -71,8 +70,8 @@ class Bot:
             Checkpoint(36.161, -2.016, radius=50),
             Checkpoint(35.9961, -5.4028, radius=30),
             Checkpoint(35.9316, -6.0423, radius=30),
-            Checkpoint(36.837, -10.173, radius=40),
-            Checkpoint(44.005, -10.016, radius=40),
+            Checkpoint(36.837, -10., radius=40),
+            Checkpoint(44.505, -9.9, radius=40),
             Checkpoint(
                 latitude=config.start.latitude,
                 longitude=config.start.longitude,
