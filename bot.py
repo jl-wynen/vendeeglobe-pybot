@@ -118,24 +118,23 @@ class Bot:
             The map of the world: 1 for sea, 0 for land.
         """
         instructions = Instructions()
-        for ch in self.course:
-            dist = distance_on_surface(
-                longitude1=longitude,
-                latitude1=latitude,
-                longitude2=ch.longitude,
-                latitude2=ch.latitude,
-            )
-            jump = dt * np.linalg.norm(speed)
-            if dist < 2.0 * ch.radius + jump:
-                instructions.sail = min(ch.radius / jump, 1)
-            else:
-                instructions.sail = 1.0
-            if dist < ch.radius:
-                ch.reached = True
-            if not ch.reached:
-                instructions.location = Location(
-                    longitude=ch.longitude, latitude=ch.latitude
-                )
-                break
+        ch = self.course[0]
+        dist = distance_on_surface(
+            longitude1=longitude,
+            latitude1=latitude,
+            longitude2=ch.longitude,
+            latitude2=ch.latitude,
+        )
+        jump = dt * np.linalg.norm(speed)
+        if dist < 2.0 * ch.radius + jump:
+            instructions.sail = min(ch.radius / jump, 1)
+        else:
+            instructions.sail = 1.0
+        if dist < ch.radius:
+            del self.course[0]
+
+        instructions.location = Location(
+            longitude=ch.longitude, latitude=ch.latitude
+        )
 
         return instructions
