@@ -130,7 +130,7 @@ class Bot:
             latitude2=ch.latitude,
         )
         jump = dt * np.linalg.norm(speed)
-        if dist < 2.0 * ch.radius + jump:
+        if dist < 0.4 * ch.radius + jump:
             instructions.sail = min(ch.radius / jump, 1)
         else:
             instructions.sail = 1.0
